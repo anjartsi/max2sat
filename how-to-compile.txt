@@ -1,0 +1,60 @@
+Professor Noga, 
+I double-checked and triple-checked these compilation steps to make sure they work,
+and that they are convenient for you as well. I also left the class files in the bin 
+directory, in case that makes it easier for you. Please let me know if you have any 
+issues running the program, or if you prefer any cosmetic changes to be made. 
+
+To compile this program, cd into the 610_ourfalian directory, then use:
+javac -d ./ src/*.java
+
+	• This will compile everything that ends in .java inside of the source directory.
+	• Since all the java files belong to the package bin, the compiler will place the 
+	  new .class files in the bin directory automatically.
+
+
+To run this program, use any of the following:
+java bin.Main
+
+There are optional arguments you can pass as well:
+	• The first argument is the name of the input file
+		─ This file MUST exist in the input_files directory
+	• The second argument is the name of the output file
+		─ This file does not need to exist, it will be generated 
+		  and placed int he output_files directory
+	• The third argument is the word "print"
+		─ If this argument (spelled print without quotes) is passed, 
+		  then the program will print all the intermediate solutions and 
+		  their values as it runs. This makes it more fun to watch, but 
+		  can get old pretty quickly.
+
+
+Examples: 
+java bin.Main test5.txt
+java bin.Main test5.txt test5output.txt
+java bin.Main test3.txt test3output.txt print
+
+File Structure: 
+
+ 610_ourfalian
+  ├─ src
+  │	  ├─ Main.java
+  │   ├─ Solver.java
+  │   ├─ Max2SAT.java
+  │   ├─ Clause.java
+  │   └─ Literal.java
+  ├─ bin
+  │	  ├─ Main.class
+  │   ├─ Solver.class
+  │   ├─ Max2SAT.class
+  │   ├─ Clause.class
+  │   └─ Literal.class
+  ├─ input_files
+  │	  ├─ test1.txt
+  │   ├─ test2.txt
+  │   ├─ test3.txt
+  │   ├─ test4.txt
+  │   └─ test5.txt
+  ├─ output_files
+  │   └─ output.txt
+  ├─ how-to-compile.txt
+  └─ My thoughts.pdf
